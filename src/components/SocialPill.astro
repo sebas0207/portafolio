@@ -1,0 +1,14 @@
+---
+import Badge from "./Badge.astro";
+import { TECHNOLOGIES, type Technology } from '../data/technologies';
+
+---
+
+<div class="block">
+    <div class="flex flex-wrap gap-3 mb-6">
+      {TECHNOLOGIES.map((tech: Technology) => (
+        <Badge title={tech.name} svg={tech.icon} />
+      ))}
+    </div>
+  </div>
+</div>

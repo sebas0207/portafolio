@@ -1,0 +1,38 @@
+---
+import '@fontsource-variable/onest'
+
+import "../styles/global.css";
+const tittle = 'Sebastian Muñoz | Desarrollador Web';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{tittle}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root{
+		color-scheme: light dark;
+	}
+	html{
+		font-family: 'Onest Variable', sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	html,
+	body {
+		box-sizing: border-box;
+		margin: 0;
+		width: 100%;
+		min-height: 100vh; /* Hace que el fondo se expanda con el contenido */
+    background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+    background-attachment: fixed; /* Evita cortes al hacer scroll */
+	}
+</style>
