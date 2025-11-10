@@ -19,6 +19,8 @@ export const TECHNOLOGIES: Technology[] = [
   { name: 'CSS', icon: '/images/tech-icons/css.svg' },
   { name: 'HTML', icon: '/images/tech-icons/html.svg' },
   { name: 'Docker', icon: '/images/tech-icons/docker.svg' },
+  // Agregar shopify
+  { name: 'Shopify', icon: '/images/tech-icons/shopify.svg' },
 ];
 
 export type { Technology };
