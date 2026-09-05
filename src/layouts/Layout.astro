@@ -2,15 +2,34 @@
 import '@fontsource-variable/onest'
 
 import "../styles/global.css";
-const tittle = 'Sebastian Muñoz | Desarrollador Web';
+
+const title = 'Sebastian Muñoz | Desarrollador Full-Stack · E-commerce Headless';
+const description =
+	'Desarrollador full-stack especializado en e-commerce headless: Shopify Plus, Hydrogen/React, Laravel, Python y automatización con n8n y Google Apps Script. Disponible para trabajar.';
+const image = '/perfil/FotoActualizada.jpg';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{tittle}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+		<meta name="author" content="Sebastian Muñoz" />
+		<link rel="canonical" href={Astro.url.href} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, Astro.url)} />
+		<meta property="og:locale" content="es_ES" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={new URL(image, Astro.url)} />
+
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
@@ -32,7 +51,13 @@ const tittle = 'Sebastian Muñoz | Desarrollador Web';
 		margin: 0;
 		width: 100%;
 		min-height: 100vh; /* Hace que el fondo se expanda con el contenido */
-    background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
-    background-attachment: fixed; /* Evita cortes al hacer scroll */
+		background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+		background-attachment: fixed; /* Evita cortes al hacer scroll */
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 	}
 </style>

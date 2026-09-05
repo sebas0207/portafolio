@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+/* Compensa la cabecera fija al navegar por anclas */
+section[id] {
+  scroll-margin-top: 6rem;
+}

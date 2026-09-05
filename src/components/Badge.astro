@@ -21,7 +21,13 @@ const { title, svg } = Astro.props;
   "
 >
   <div class="w-5 h-5 text-white">
-    <img src={svg} alt="icons" class="filter invert" />
+    <img
+      src={svg}
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      class="w-full h-full object-contain filter invert"
+    />
   </div>
   <span class="text-sm font-medium text-white">{title}</span>
 </div>

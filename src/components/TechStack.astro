@@ -1,0 +1,21 @@
+---
+import Badge from "./Badge.astro";
+import { TECHNOLOGY_GROUPS, type TechnologyGroup } from "../data/technologies";
+---
+
+<div class="flex flex-col gap-6">
+  {
+    TECHNOLOGY_GROUPS.map((group: TechnologyGroup) => (
+      <div>
+        <h3 class="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+          {group.category}
+        </h3>
+        <div class="flex flex-wrap gap-3">
+          {group.items.map((tech) => (
+            <Badge title={tech.name} svg={tech.icon} />
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</div>

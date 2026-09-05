@@ -1,0 +1,60 @@
+---
+import Tag from "./Tag.astro";
+
+interface Props {
+  index: number;
+  title: string;
+  role: string;
+  context: string;
+  decision: string;
+  result: string;
+  tags: string[];
+}
+
+const { index, title, role, context, decision, result, tags } = Astro.props;
+
+const BLOCKS = [
+  { label: "Contexto", text: context },
+  { label: "Decisión técnica", text: decision },
+  { label: "Resultado", text: result },
+];
+---
+
+<article
+  class="group relative rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-teal-500/40 md:p-8"
+>
+  <header class="flex items-start gap-4">
+    <span
+      class="mt-1 flex size-8 flex-none items-center justify-center rounded-full border border-teal-500/40 text-sm font-semibold text-teal-400"
+    >
+      {String(index).padStart(2, "0")}
+    </span>
+    <div>
+      <h3
+        class="text-xl font-semibold text-white transition-colors duration-300 group-hover:text-teal-400"
+      >
+        {title}
+      </h3>
+      <p class="text-sm font-medium text-teal-500/90">{role}</p>
+    </div>
+  </header>
+
+  <dl class="mt-6 flex flex-col gap-4">
+    {
+      BLOCKS.map(({ label, text }) => (
+        <div class="grid gap-1 md:grid-cols-[150px_1fr] md:gap-4">
+          <dt class="text-xs font-semibold uppercase tracking-wider text-gray-400">
+            {label}
+          </dt>
+          <dd class="m-0 text-base font-normal leading-relaxed text-pretty text-gray-300">
+            {text}
+          </dd>
+        </div>
+      ))
+    }
+  </dl>
+
+  <footer class="mt-6 flex flex-wrap gap-2">
+    {tags.map((tag) => <Tag label={tag} />)}
+  </footer>
+</article>

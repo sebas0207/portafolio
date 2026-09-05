@@ -1,20 +1,42 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
+
 const EXPERIENCE = [
   {
-    date: "Actualmente...",
+    date: "Octubre 2025 — Actualidad",
     title: "Desarrollador Web",
     company: "La Casa De Las Carcasas",
-    description: "Desarrollador web enfocado en e-commerce y arquitecturas headless con Shopify. Especializado en integración de APIs, automatización de procesos y optimización de tiendas online. Experiencia en gestión de contenido dinámico, sincronización de catálogos y mejora del rendimiento y SEO técnico en entornos productivos.",
-    link: "https://www.linkedin.com/in/sebastian-muñoz-8145a9302/",
+    description:
+      "Desarrollo y mantengo el e-commerce headless de la compañía (Shopify Plus + Hydrogen/React) junto a las herramientas internas que lo sostienen, trabajando de punta a punta entre frontend, backend y datos.",
+    achievements: [
+      "Lideré el rollout de un nuevo mercado internacional: pipeline de localización del catálogo e i18n del storefront con remix-i18next.",
+      "Integré un motor de búsqueda de terceros con el carrito resolviendo una incompatibilidad de IDs de producto y variante.",
+      "Construí una herramienta interna en Google Apps Script para gestionar metaobjetos por lotes vía GraphQL, con dry-run y soporte multi-país.",
+      "Diagnostiqué con datos una discrepancia de atribución en el píxel de conversión de Meta Ads hasta aislar su causa.",
+      "Automatizo procesos internos y tareas de datos con n8n y Python.",
+    ],
+    tags: [
+      "Shopify Plus",
+      "Hydrogen",
+      "React",
+      "GraphQL",
+      "Google Apps Script",
+      "n8n",
+    ],
+    link: "https://www.linkedin.com/in/sebastian-mu%C3%B1oz-8145a9302/",
   },
   {
-    date: "Desde el 30 de Marzo de 2025 hasta el 30 de Septiembre de 2025",
-    title: "Prácticas - Desarrollo de aplicaciones Web",
+    date: "Marzo 2025 — Septiembre 2025",
+    title: "Prácticas · Desarrollo de Aplicaciones Web",
     company: "La Casa De Las Carcasas",
     description:
-      "Durante mis prácticas he adquirido experiencia con PrestaShop, modificando y creando módulos en PHP. También desarrollé un proyecto utilizando React y Laravel para un sistema de redes e información.",
-    link: "https://www.linkedin.com/in/sebastian-muñoz-8145a9302/",
+      "Primer contacto con e-commerce en producción, combinando mantenimiento de plataforma con desarrollo a medida.",
+    achievements: [
+      "Creación y modificación de módulos en PHP sobre PrestaShop.",
+      "Desarrollo de un sistema interno de redes e información con React y Laravel.",
+    ],
+    tags: ["PrestaShop", "PHP", "Laravel", "React"],
+    link: "https://www.linkedin.com/in/sebastian-mu%C3%B1oz-8145a9302/",
   },
 ];
 ---
@@ -22,7 +44,7 @@ const EXPERIENCE = [
 <ol class="relative mt-16">
   {
     EXPERIENCE.map((experience) => (
-      <li class="">
+      <li>
         <ExperienceItem {...experience} />
       </li>
     ))

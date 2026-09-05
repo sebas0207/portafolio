@@ -1,0 +1,62 @@
+---
+const EMAIL = "sebastianmq027@gmail.com";
+const LINKEDIN = "https://www.linkedin.com/in/sebastian-mu%C3%B1oz-8145a9302/";
+const CV =
+  "https://drive.google.com/file/d/1jK_lWTRDQZldt9d5xlRdMW57zL1sf4Kz/view";
+---
+
+<section id="contacto" class="lg:w-[740px] w-full mx-auto pt-20">
+  <div
+    class="rounded-2xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-md md:p-10"
+  >
+    <h2 class="text-3xl font-semibold text-white">
+      ¿Buscas a alguien para tu equipo?
+    </h2>
+    <p class="mt-4 max-w-xl text-base leading-relaxed text-pretty text-gray-300">
+      Estoy abierto a nuevas oportunidades como desarrollador full-stack, con
+      preferencia por proyectos de e-commerce, producto digital o automatización.
+      Escríbeme y te respondo en menos de 24 horas.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center gap-4">
+      <a
+        href={`mailto:${EMAIL}`}
+        class="inline-flex items-center gap-2 rounded-lg bg-teal-500 px-5 py-2.5 text-sm font-semibold text-black transition-all duration-300 hover:bg-teal-400 hover:scale-105 active:scale-95"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="size-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+          ></path>
+          <path d="M3 7l9 6l9 -6"></path>
+        </svg>
+        {EMAIL}
+      </a>
+      <a
+        href={LINKEDIN}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-5 py-2.5 text-sm font-medium text-gray-200 transition-all duration-300 hover:border-teal-500/50 hover:bg-white/5 hover:scale-105 active:scale-95"
+      >
+        LinkedIn
+      </a>
+      <a
+        href={CV}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-lg border border-white/15 px-5 py-2.5 text-sm font-medium text-gray-200 transition-all duration-300 hover:border-teal-500/50 hover:bg-white/5 hover:scale-105 active:scale-95"
+      >
+        Descargar CV
+      </a>
+    </div>
+  </div>
+</section>
